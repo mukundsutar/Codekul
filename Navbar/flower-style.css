@@ -1,0 +1,54 @@
+.flower-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 440px;
+    height: max-content;
+
+    margin-top: 69px;
+    margin-left: 340px;
+}
+
+/* static color */
+.leaf1 {
+    background-color: #e9c46a;
+}
+
+.leaf2 {
+    transform: rotate(90deg);
+    background-color: #e76f51;
+}
+
+.leaf3 {
+    background-color: #f4a261;
+}
+
+.leaf4 {
+    transform: rotate(90deg);
+    background-color: #2a9d8f;
+}
+
+/* hover */
+.leaf1:hover {
+    background-color: #a663cc;
+}
+
+.leaf2:hover {
+    background-color: #118ab2;
+}
+
+.leaf3:hover {
+    background-color: #ef476f;
+}
+
+.leaf4:hover {
+    background-color: #f4a261;
+}
+
+/* hover end */
+
+.flower {
+    height: 200px;
+    width: 200px;
+    border-radius: 0% 50% 0% 50%;
+    margin: 10px;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body{
+    /* overflow: hidden; */
+    overflow-y: hidden;
+    background-color: #ff8427;
+}
+
+.container {
+    /* width: 100vw;
+    height: 100vh; */
+
+    margin: 0px;
+    padding: 0px;
+
+    background-image: url(pokemon-bg.jpg);
+}
+
+.content{
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px;
+    padding: 0px;
+
+    height: 21vh;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 69px;
+    background-color: #4d8b31;
+    color: #ffffff;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0px;
+    padding: 0px;
+
+    width: 350px;
+    height: 77vh;
+
+    background-color: #1e212b;
+    color: #ffffff;
+}
+
+.list{
+    height: 100%;
+    padding-left: 0px;
+
+    font-size: 20px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.list-items{
+    padding: 55px;
+}
+
+.list-items:hover{
+    padding: 49px;
+    font-size: 30px;
+}
+
+.header:hover{
+    cursor: grab;
+}
