@@ -34,6 +34,7 @@ body{
     font-size: 69px;
     background-color: #4d8b31;
     color: #ffffff;
+    /* text-transform: uppercase; */
 }
 
 .sidebar {
