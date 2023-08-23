@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Playfair+Display&display=swap');
 
 body{
     /* overflow: hidden; */
     overflow-y: hidden;
-    background-color: #ff8427;
+    background-color: #e5e5e5;
+    margin: 0px;
 }
 
 .container {
-    /* width: 100vw;
-    height: 100vh; */
+    width: 100vw;
+    height: 100vh;
 
     margin: 0px;
     padding: 0px;
@@ -16,7 +17,7 @@ body{
     background-image: url(pokemon-bg.jpg);
 }
 
-.content{
+.container-body{
     display: flex;
 }
 
@@ -28,11 +29,11 @@ body{
     margin: 0px;
     padding: 0px;
 
-    height: 21vh;
+    height: 15vh;
 
     font-family: 'Playfair Display', serif;
     font-size: 69px;
-    background-color: #4d8b31;
+    background-color: #14213d;
     color: #ffffff;
     /* text-transform: uppercase; */
 }
@@ -46,10 +47,11 @@ body{
     margin: 0px;
     padding: 0px;
 
-    width: 350px;
-    height: 77vh;
+    /* width: 18rem; */
+    min-width: 18rem;
+    height: 85vh;
 
-    background-color: #1e212b;
+    background-color: #101010;
     color: #ffffff;
 }
 
@@ -57,20 +59,70 @@ body{
     height: 100%;
     padding-left: 0px;
 
-    font-size: 20px;
+    font-size: 22px;
+    font-family: 'Nunito', sans-serif;
     list-style-type: none;
     text-align: center;
 }
 
 .list-items{
-    padding: 55px;
+    padding: 4.2rem;
 }
 
 .list-items:hover{
     padding: 49px;
-    font-size: 30px;
+    font-size: 34px;
 }
 
 .header:hover{
     cursor: grab;
+}
+
+.content{
+    padding: .5rem;
+}
+
+.banner{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.intro{
+    margin-top: .5rem;
+    padding: 15px;
+
+    background-color: #1e212b;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.intro p{
+    margin: 0px;
+}
+
+.pokemon{
+    display: flex;
+    justify-content: space-evenly;
+    margin: .5rem;
+}
+
+.pokemon img{
+width: 14rem;
+
+border-radius: 5rem;
+background-color: aliceblue;
+}
+
+#img1:hover{
+    background-color: #2a513f;
+}
+
+#img2:hover{
+    background-color: #e53800;
+}
+
+#img3:hover{
+    background-color: #297383;
 }
