@@ -1,0 +1,63 @@
+@media only screen and (min-width : 1020px) {
+    body{
+        overflow-y: auto;
+    }
+
+    .container-body {
+        flex-direction: column;
+    }
+
+    .header {
+        width: 100vw;
+        height: 12vh;
+
+        font-size: 2.5rem;
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 0;
+
+        flex-direction: row;
+
+        width: 100%;
+        height: 15vh;
+    }
+
+    .list {
+
+        display: flex;
+
+        /* height: 100%; */
+        padding-left: 0px;
+
+        font-size: 15px;
+    }
+
+    .list-items {
+        padding: 1rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .intro {
+        margin-top: 1rem;
+
+        font-size: 15px;
+    }
+
+    .pokemon {
+        flex-direction: column;
+        align-items: center;
+
+        margin: 1rem;
+    }
+
+    .pokemon img {
+        width: 15rem;
+
+        margin: 2rem;
+    }
+}
