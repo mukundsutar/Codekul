@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form-Input</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -13,12 +16,10 @@
             <label for="searchText">Goggles</label>
             <br>
             <input id="searchText" name="searchText" type="text">
-            <input id="submitBtn" name="submitBtn" type="submit">
+            <input id="submitBtn" name="submitBtn" type="submit" value="Goggles Search">
         </form>
 
-        <div class="details">
-            <div id="info"></div>
-        </div>
+        <div id="info"></div>
     </div>
 
     <script>
@@ -46,19 +47,19 @@
                 "20::Google LLC::Mountain View::113",
             ]
 
-            let query = document.forms["searchForm"]["searchText"].value;
+            let input = document.forms["searchForm"]["searchText"].value;
 
+            let query= input.toLowerCase();
+            console.log(query);
 
             for (let i = 0; i < data.length; i++) {
                 let arraySplit = data[i].split("::");
 
-                if (query.toLowerCase == arraySplit[2].toLowerCase) {
-                    updateInfo(arraySplit);
+                if (query == arraySplit[2].toLowerCase()) {
 
-                    console.log(arraySplit);
+                    updateInfo(arraySplit);
+                    // console.log("yes");
                     break;
-                } else {
-                    continue;
                 }
             }
 
@@ -66,9 +67,6 @@
         }
 
         function updateInfo(arraySplit) {
-
-            let cname = arraySplit[1];
-
             document.getElementById("info").innerText = `${arraySplit[1]} is located at ${arraySplit[2]}. And currently there are ${arraySplit[3]} clients working them.`
         }
     </script>
