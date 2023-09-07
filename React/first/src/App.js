@@ -6,7 +6,7 @@ function App() {
     <>
 	<div>
       <h1>Hello World!</h1>
-	  <p>This is my First React Website.</p>
+	  <p>This is my First React App.</p>
 	</div>
     </>
   );

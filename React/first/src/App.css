@@ -49,8 +49,11 @@ div{
 
 h1 {
   color: blueviolet;
+
+  font-size: 50px;
 }
 
 body{
   background-color: antiquewhite;
+font-size: 30px;
 }
