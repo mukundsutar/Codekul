@@ -65,10 +65,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  /* align-items: center; */
 }
 
-.navbarItems{
+.navbarItems {
   height: 100px;
   /* margin: 0px 50px; */
 }
