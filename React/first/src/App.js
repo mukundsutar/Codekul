@@ -1,15 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from './Components/Header';
+import Home from './Components/Home';
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-  return (
-    <>
-	<div>
-      <h1>Hello World!</h1>
-	  <p>This is my First React App.</p>
-	</div>
-    </>
-  );
+	return (
+		<>
+      <div>
+
+      </div>
+
+			<div>
+				<Header/>
+        <Home/>
+			</div>
+		</>
+	);
 }
 
 export default App;
