@@ -1,8 +1,11 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
+import "../Input.css";
 
-export default function InputApp({ numberCallback, dateCallback, cvvCallback }) {
-
+export default function InputApp({
+	numberCallback,
+	dateCallback,
+	cvvCallback,
+}) {
 	const btnRandomNumber = () => {
 		let max = 9999999999999999;
 		let min = 1000000000000000;
@@ -10,7 +13,6 @@ export default function InputApp({ numberCallback, dateCallback, cvvCallback }) 
 		numberCallback(Math.floor(Math.random() * (max - min) + min));
 	};
 
-	
 	const btnRandomExpiry = () => {
 		let max = 1240;
 		let min = 100;
@@ -18,12 +20,12 @@ export default function InputApp({ numberCallback, dateCallback, cvvCallback }) 
 		dateCallback(Math.floor(Math.random() * (max - min) + min));
 	};
 
-	const btnRandomCVV = ()=>{
+	const btnRandomCVV = () => {
 		let max = 999;
 		let min = 100;
 
 		cvvCallback(Math.floor(Math.random() * (max - min) + min));
-	}
+	};
 
 	return (
 		<>
@@ -34,7 +36,7 @@ export default function InputApp({ numberCallback, dateCallback, cvvCallback }) 
 					</div>
 					<div id="enter-number-field" className="enter-number-ele">
 						<form>
-							<input type="text"/>
+							<input type="text" />
 						</form>
 					</div>
 					<div id="enter-number-button" className="enter-number-ele">
@@ -94,9 +96,11 @@ export default function InputApp({ numberCallback, dateCallback, cvvCallback }) 
 						</form>
 					</div>
 					<div id="enter-cvv-button" className="enter-cvv-ele">
-					<button onClick={btnRandomCVV}>Random</button>
+						<button onClick={btnRandomCVV}>Random</button>
 					</div>
 				</div>
+
+				<button>Choose Background</button>
 			</div>
 		</>
 	);

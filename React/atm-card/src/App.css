@@ -14,10 +14,6 @@
 }
 
 body {
-  /* background-color: coral; */
-}
-
-.main-container {
   width: 100%;
   height: 100vh;
 
@@ -45,6 +41,7 @@ body {
 }
 
 .front-preview {
+  width: 435px;
   height: 240px;
 
   padding: 20px;
@@ -57,6 +54,7 @@ body {
 }
 
 .back-preview {
+  width: 475px;
   height: 280px;
 
   padding: 20px;
@@ -166,21 +164,23 @@ body {
 /* card-back-preview */
 .back-preview {
   padding: 0px;
+
+  font-family: 'Signika Negative', sans-serif;
 }
 
 .back-ele {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   color: aliceblue;
 }
 
-.back-ele-seal,
+.back-ele-hologram,
 .back-ele-cvv {
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
-.cvv-div{
+.cvv-div {
   width: 100%;
-  height: 30%;
+  height: 35%;
 
   margin-top: 20px;
 
@@ -189,25 +189,48 @@ body {
   justify-content: space-around;
 }
 
-.back-ele-contact{
+.back-ele-contact {
+  height: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  font-size: 10px;
 }
 
-.back-ele-tape{
-  height: 20%;
+.back-ele-tape {
+  height: 25%;
   background-color: black;
 }
 
-.back-ele-seal{
-  width: 30%;
+.back-ele-hologram {
+  width: 25%;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.back-ele-cvv{
+.back-ele-cvv {
   width: 15%;
 
-  margin: 15px 0px;
+  margin: 20px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: aliceblue;
   color: black;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.back-ele-hologram img {
+  width: 70%;
+  height: 90%;
+
+  border-radius: 15px;
 }
