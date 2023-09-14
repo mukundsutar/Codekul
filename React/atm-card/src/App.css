@@ -45,7 +45,7 @@ body {
 }
 
 .front-preview {
-  height: 40%;
+  height: 240px;
 
   padding: 20px;
   margin: 10px;
@@ -57,7 +57,7 @@ body {
 }
 
 .back-preview {
-  height: 40%;
+  height: 280px;
 
   padding: 20px;
   margin: 10px;
@@ -161,4 +161,53 @@ body {
   width: 20%;
 
   font-size: 25px;
+}
+
+/* card-back-preview */
+.back-preview {
+  padding: 0px;
+}
+
+.back-ele {
+  border: 2px solid black;
+  color: aliceblue;
+}
+
+.back-ele-seal,
+.back-ele-cvv {
+  border: 2px solid black;
+}
+
+.cvv-div{
+  width: 100%;
+  height: 30%;
+
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.back-ele-contact{
+  display: flex;
+  justify-content: center;
+}
+
+.back-ele-tape{
+  height: 20%;
+  background-color: black;
+}
+
+.back-ele-seal{
+  width: 30%;
+}
+
+.back-ele-cvv{
+  width: 15%;
+
+  margin: 15px 0px;
+
+  background-color: aliceblue;
+  color: black;
 }

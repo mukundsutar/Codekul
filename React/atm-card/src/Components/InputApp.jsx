@@ -1,10 +1,29 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
-export default function InputApp({ callback }) {
-	const btnRandom = () => {
-		callback(Math.floor(Math.random() * (9999999999999999 - 1000000000000000) + 1000000000000000));
+export default function InputApp({ numberCallback, dateCallback, cvvCallback }) {
+
+	const btnRandomNumber = () => {
+		let max = 9999999999999999;
+		let min = 1000000000000000;
+
+		numberCallback(Math.floor(Math.random() * (max - min) + min));
 	};
+
+	
+	const btnRandomExpiry = () => {
+		let max = 1240;
+		let min = 100;
+
+		dateCallback(Math.floor(Math.random() * (max - min) + min));
+	};
+
+	const btnRandomCVV = ()=>{
+		let max = 999;
+		let min = 100;
+
+		cvvCallback(Math.floor(Math.random() * (max - min) + min));
+	}
 
 	return (
 		<>
@@ -15,11 +34,11 @@ export default function InputApp({ callback }) {
 					</div>
 					<div id="enter-number-field" className="enter-number-ele">
 						<form>
-							<input type="text" />
+							<input type="text"/>
 						</form>
 					</div>
 					<div id="enter-number-button" className="enter-number-ele">
-						<button onClick={btnRandom}>Random</button>
+						<button onClick={btnRandomNumber}>Random</button>
 					</div>
 				</div>
 
@@ -44,7 +63,7 @@ export default function InputApp({ callback }) {
 						</form>
 					</div>
 					<div id="enter-expiry-button" className="enter-expiry-ele">
-						Random
+						<button onClick={btnRandomExpiry}>Random</button>
 					</div>
 				</div>
 
@@ -75,7 +94,7 @@ export default function InputApp({ callback }) {
 						</form>
 					</div>
 					<div id="enter-cvv-button" className="enter-cvv-ele">
-						Random
+					<button onClick={btnRandomCVV}>Random</button>
 					</div>
 				</div>
 			</div>
