@@ -1,0 +1,75 @@
+/* input css */
+.input-ele {
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+
+    /* border: 2px solid black; */
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.enter-number-ele,
+.enter-name-ele,
+.enter-expiry-ele,
+.enter-background-ele,
+.enter-cvv-ele {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid black; */
+}
+
+#enter-number-title,
+#enter-name-title,
+#enter-expiry-title,
+#enter-background-title,
+#enter-cvv-title {
+    width: 30%;
+}
+
+#enter-number-field,
+#enter-name-field,
+#enter-expiry-field,
+#enter-cvv-field {
+    flex-grow: 2;
+
+    font-weight: 400;
+}
+
+#enter-number-button,
+#enter-name-button,
+#enter-expiry-button,
+#enter-cvv-button {
+    width: 15%;
+}
+
+#enter-background-title {
+    width: 40%;
+}
+
+/* individual css */
+#enter-number-field form,
+#enter-name-field form,
+#enter-expiry-field form,
+#enter-cvv-field form {
+    width: calc(100% - 10px);
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#enter-number-field input,
+#enter-name-field input,
+#enter-expiry-field input,
+#enter-cvv-field input {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    
+    font-size: 20px;
+}
