@@ -1,5 +1,6 @@
 import React from "react";
 import "../Input.css";
+import { NavLink } from "react-router-dom";
 
 export default function InputApp({
 	numberCallback,
@@ -80,9 +81,6 @@ export default function InputApp({
 						id="enter-background-field"
 						className="enter-background-ele"
 					>
-						<form>
-							<input type="file" />
-						</form>
 					</div>
 				</div>
 
@@ -100,7 +98,13 @@ export default function InputApp({
 					</div>
 				</div>
 
-				<button>Choose Background</button>
+				<div className="input-ele enter-button-div">
+
+				<NavLink className="navbar-ele navbar-background" to={"/about"}>
+				<button className="input-button">Choose Background</button>
+				</NavLink>
+					
+				</div>
 			</div>
 		</>
 	);

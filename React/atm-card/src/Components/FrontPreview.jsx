@@ -4,8 +4,8 @@ import chipimg from "../img/emv-chip.png";
 export default function FrontPreview({ number, date, cvv }) {
 	const numStr = JSON.stringify({ number });
 	const dateStr = JSON.stringify({ date });
-	console.log(dateStr);
-	console.log(dateStr.length);
+	// console.log(dateStr);
+	// console.log(dateStr.length);
 
 	let num1 = 1234;
 	let num2 = 1234;
@@ -32,8 +32,8 @@ export default function FrontPreview({ number, date, cvv }) {
 	// console.log(num2);
 	// console.log(num3);
 	// console.log(num4);
-	console.log(date1);
-	console.log(date2);
+	// console.log(date1);
+	// console.log(date2);
 
 	return (
 		<>
