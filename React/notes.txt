@@ -1,0 +1,43 @@
+
+	const btnRandomNumber = () => {
+		let max = 9999999999999999;
+		let min = 1000000000000000;
+
+		numberCallback(Math.floor(Math.random() * (max - min) + min));
+	};
+
+	const btnRandomExpiry = () => {
+		let max = 1240;
+		let min = 100;
+
+		dateCallback(Math.floor(Math.random() * (max - min) + min));
+	};
+
+	const btnRandomCVV = () => {
+		let max = 999;
+		let min = 100;
+
+		cvvCallback(Math.floor(Math.random() * (max - min) + min));
+	};
+
+
+
+	// input to preview
+	const inputNumber = (e) => {
+		console.log(e.target.value);
+		textNumberCallback(e.target.value);
+	};
+
+	const inputName = (e) => {
+		textNameCallback(e.target.value);
+	};
+
+	const inputDate = (e) => {
+		textDateCallback(e.target.value);
+	};
+
+	const inputCVV = (e) => {
+		textCVVCallback(e.target.value);
+	};
+
+	let number= 1234
