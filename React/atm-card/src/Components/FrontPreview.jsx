@@ -1,25 +1,34 @@
 import React from "react";
 import chipimg from "../img/emv-chip.png";
 
-export default function FrontPreview({ number, date, cvv }) {
+export default function FrontPreview({ number, date, image, name }) {
 	const numStr = JSON.stringify({ number });
 	const dateStr = JSON.stringify({ date });
-	// console.log(dateStr);
-	// console.log(dateStr.length);
+	const nameStr = JSON.stringify({ name });
 
+	// define initial
 	let num1 = 1234;
 	let num2 = 1234;
 	let num3 = 1234;
 	let num4 = 1234;
-	let date1 = 12;
-	let date2 = 34;
+	let date1 = 15;
+	let date2 = 12;
+	let name1 = nameStr;
 
+	// format numbers
 	if (numStr.length == 27) {
 		num1 = numStr.substring(10, 14);
 		num2 = numStr.substring(14, 18);
 		num3 = numStr.substring(18, 22);
 		num4 = numStr.substring(22, 26);
+	} else {
+		num1 = numStr.substring(11, 15);
+		num2 = numStr.substring(15, 19);
+		num3 = numStr.substring(19, 23);
+		num4 = numStr.substring(23, 27);
 	}
+
+	// format dates
 	if (dateStr.length == 12) {
 		date1 = "0" + dateStr.substring(8, 9);
 		date2 = dateStr.substring(9, 11);
@@ -27,6 +36,9 @@ export default function FrontPreview({ number, date, cvv }) {
 		date1 = dateStr.substring(8, 10);
 		date2 = dateStr.substring(10, 12);
 	}
+
+	// format name
+	name1 = nameStr.substring(9, nameStr.length - 2);
 
 	// console.log(num1);
 	// console.log(num2);
@@ -37,7 +49,7 @@ export default function FrontPreview({ number, date, cvv }) {
 
 	return (
 		<>
-			<div className="front-preview">
+			<div id={image} className="front-preview">
 				<div className="chip-div">
 					<div id="chip" className="card-ele">
 						<img src={chipimg} alt="Image not Found" />
@@ -72,7 +84,7 @@ export default function FrontPreview({ number, date, cvv }) {
 
 				<div className="name-date-div">
 					<div id="name" className="card-ele">
-						Mukund H. Sutar
+						{name1}
 					</div>
 					<div id="name-date-space" className="card-ele break"></div>
 

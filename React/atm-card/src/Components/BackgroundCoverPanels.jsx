@@ -4,27 +4,34 @@ import atmBack2 from "../img/atm-background-2.jpg";
 import atmBack3 from "../img/atm-background-3.jpg";
 import "../ImageGallery.css";
 
-export default function BackgroundCoverPanels() {
-	const [image, setImage] = useState();
-
+export default function BackgroundCoverPanels({ imageFrontCallback }) {
 	const changeImage = (e) => {
-		setImage(e.target.backgroundImage);
+		imageFrontCallback(e.target.id);
 	};
-
-	let back1 = "url(" + atmBack1 + ")";
-	let back2 = "url(" + atmBack2 + ")";
-	let back3 = "url(" + atmBack3 + ")";
 
 	return (
 		<>
-			{/* <div className="front-preview" style={{backgroundImage: "url(" + imageURL + ")"}}></div> */}
-
 			<div className="image-gallery input">
-				<div className="image-gallery-ele front-preview"  onClick={changeImage} style={{backgroundImage: back1}}></div>
+				<img
+					id="one"
+					className="image-gallery-ele front-preview"
+					onClick={changeImage}
+					style={{ backgroundImage: atmBack1 }}
+				/>
 
-				<div className="image-gallery-ele front-preview"  onClick={changeImage} style={{backgroundImage: back2}}></div>
+				<img
+					id="two"
+					className="image-gallery-ele front-preview"
+					onClick={changeImage}
+					style={{ backgroundImage: atmBack2 }}
+				/>
 
-				<div className="image-gallery-ele front-preview"  onClick={changeImage} style={{backgroundImage: back3}}></div>
+				<img
+					id="three"
+					className="image-gallery-ele front-preview"
+					onClick={changeImage}
+					style={{ backgroundImage: atmBack3 }}
+				/>
 			</div>
 		</>
 	);

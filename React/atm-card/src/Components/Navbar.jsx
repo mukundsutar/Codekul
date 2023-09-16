@@ -5,15 +5,29 @@ export default function Navbar() {
 	return (
 		<>
 			<div className="navbar">
-				<NavLink className="navbar-ele navbar-home" to={"/"}>
+				<NavLink
+					className="navbar-ele navbar-home"
+					to={"/"}
+					style={{ textDecoration: "none" }}
+				>
 					Home
 				</NavLink>
 
-				<NavLink className="navbar-ele navbar-background" to={"/background"}>
+				<NavLink
+					className="navbar-ele navbar-background"
+					to={"/background"}
+					style={{ textDecoration: "none" }}
+				>
 					Choose Background
 				</NavLink>
 
-				<div className="navbar-ele navabr-generate">Generate</div>
+				<NavLink
+					className="navbar-ele navbar-generate"
+					to={"/generate"}
+					style={{ textDecoration: "none" }}
+				>
+					Generate
+				</NavLink>
 			</div>
 		</>
 	);

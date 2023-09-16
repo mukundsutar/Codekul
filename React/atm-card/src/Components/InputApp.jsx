@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Input.css";
 import { NavLink } from "react-router-dom";
 
@@ -6,6 +6,10 @@ export default function InputApp({
 	numberCallback,
 	dateCallback,
 	cvvCallback,
+	inputNumberCallback,
+	inputNameCallback,
+	inputDateCallback,
+	inputCVVCallback,
 }) {
 	const btnRandomNumber = () => {
 		let max = 9999999999999999;
@@ -28,6 +32,25 @@ export default function InputApp({
 		cvvCallback(Math.floor(Math.random() * (max - min) + min));
 	};
 
+	let text = "";
+
+	// input to preview
+	const inputNumber = (e) => {
+		inputNumberCallback(e.target.value);
+	};
+
+	const inputName = (e) => {
+		inputNameCallback(e.target.value);
+	};
+
+	const inputDate = (e) => {
+		inputDateCallback(e.target.value);
+	};
+
+	const inputCVV = (e) => {
+		inputCVVCallback(e.target.value);
+	};
+
 	return (
 		<>
 			<div className="input">
@@ -37,7 +60,11 @@ export default function InputApp({
 					</div>
 					<div id="enter-number-field" className="enter-number-ele">
 						<form>
-							<input type="text" />
+							<input
+								type="text"
+								value={number}
+								onChange={inputNumber}
+							/>
 						</form>
 					</div>
 					<div id="enter-number-button" className="enter-number-ele">
@@ -51,7 +78,11 @@ export default function InputApp({
 					</div>
 					<div id="enter-name-field" className="enter-name-ele">
 						<form>
-							<input type="text" />
+							<input
+								type="text"
+								value={name}
+								onChange={inputName}
+							/>
 						</form>
 					</div>
 				</div>
@@ -62,25 +93,15 @@ export default function InputApp({
 					</div>
 					<div id="enter-expiry-field" className="enter-expiry-ele">
 						<form>
-							<input type="text" />
+							<input
+								type="text"
+								value={date}
+								onChange={inputDate}
+							/>
 						</form>
 					</div>
 					<div id="enter-expiry-button" className="enter-expiry-ele">
 						<button onClick={btnRandomExpiry}>Random</button>
-					</div>
-				</div>
-
-				<div className="input-ele enter-background-div">
-					<div
-						id="enter-background-title"
-						className="enter-background-ele"
-					>
-						Change Background
-					</div>
-					<div
-						id="enter-background-field"
-						className="enter-background-ele"
-					>
 					</div>
 				</div>
 
@@ -90,7 +111,11 @@ export default function InputApp({
 					</div>
 					<div id="enter-cvv-field" className="enter-cvv-ele">
 						<form>
-							<input type="text" />
+							<input
+								type="text"
+								value={cvv}
+								onChange={inputCVV}
+							/>
 						</form>
 					</div>
 					<div id="enter-cvv-button" className="enter-cvv-ele">
@@ -99,11 +124,15 @@ export default function InputApp({
 				</div>
 
 				<div className="input-ele enter-button-div">
-
-				<NavLink className="navbar-ele navbar-background" to={"/about"}>
-				<button className="input-button">Choose Background</button>
-				</NavLink>
-					
+					<NavLink
+						className="navbar-ele navbar-background"
+						to={"/background"}
+						style={{ textDecoration: "none" }}
+					>
+						<button className="input-button">
+							Choose Background
+						</button>
+					</NavLink>
 				</div>
 			</div>
 		</>
