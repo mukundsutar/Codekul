@@ -9,6 +9,7 @@
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
     font-weight: 600;
+    color: aliceblue;
 }
 
 .enter-number-ele,
@@ -29,6 +30,7 @@
 #enter-background-title,
 #enter-cvv-title {
     width: 30%;
+    justify-content: start;
 }
 
 #enter-number-field,
@@ -45,6 +47,23 @@
 #enter-expiry-button,
 #enter-cvv-button {
     width: 15%;
+}
+
+.input button,
+.input button,
+.input button,
+.input button {
+    height: 80%;
+    background-color: #946f5a;
+    border: 0px;
+    box-shadow: inset 0px 0px 30px -10px rgba(0,0,0, .5);
+}
+
+.input button:active,
+.input button:active,
+.input button:active,
+.input button:active {
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0, .5);
 }
 
 #enter-background-title {
@@ -72,11 +91,12 @@
     height: calc(100% - 10px);
     
     font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .enter-button-div{
     width: 100%;
-    height: 10%;
+    height: 20%;
 
     margin-top: 30px;
     padding: 30px 0px;
@@ -87,9 +107,18 @@
 }
 
 .enter-button-div button{
-    width: 80%;
+    width: 100%;
     height: 100%;
 
     border-radius: 20px;
-    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.enter-button-div a{
+    width: 40%;
+    height: 60%;
+
+    margin-left: 30px;
 }

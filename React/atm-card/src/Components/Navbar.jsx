@@ -7,10 +7,10 @@ export default function Navbar() {
 			<div className="navbar">
 				<NavLink
 					className="navbar-ele navbar-home"
-					to={"/"}
+					to={"/atm-card"}
 					style={{ textDecoration: "none" }}
 				>
-					Home
+					Enter Details
 				</NavLink>
 
 				<NavLink
@@ -18,16 +18,16 @@ export default function Navbar() {
 					to={"/background"}
 					style={{ textDecoration: "none" }}
 				>
-					Choose Background
+					Preview
 				</NavLink>
 
-				<NavLink
+				{/* <NavLink
 					className="navbar-ele navbar-generate"
 					to={"/generate"}
 					style={{ textDecoration: "none" }}
 				>
 					Generate
-				</NavLink>
+				</NavLink> */}
 			</div>
 		</>
 	);
