@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {}
+
+.navbar {
+    width: 100%;
+
+    margin: 50px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    font-size: 30px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding: 0px 50px;
+    padding-top: 50px;
+}
